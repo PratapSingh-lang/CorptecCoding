@@ -1,0 +1,11 @@
+[
+  {
+    "applyTo": "region",
+    "headers": [
+      {
+        "name": "content-type",
+        "value": "application/json"
+      }
+    ]
+  }
+]

@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "03c1044c-2cb8-4361-8e72-3110b123df58",
+		"name": "ETL Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17524692"
+	},
+	"item": [
+		{
+			"name": "data based on region name",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/customerDetails/Houston/region",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customerDetails",
+						"Houston",
+						"region"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data based on job specification",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "Application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/customerDetails/Software%20Engineer/classification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customerDetails",
+						"Software%20Engineer",
+						"classification"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
