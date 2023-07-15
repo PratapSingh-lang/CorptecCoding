@@ -33,7 +33,7 @@ public class CustomerDataGenerator {
         Random random = new Random();
         List<CustomerData> customers = new ArrayList<>();
 
-        for (int i = 0; i < 500 ; i++) {
+        for (int i = 0; i < 5000 ; i++) {
             CustomerData customer = new CustomerData();
             
             customer.setCustomerId(initialCustomerId + i);

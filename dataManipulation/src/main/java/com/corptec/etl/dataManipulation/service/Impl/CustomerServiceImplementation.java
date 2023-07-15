@@ -29,7 +29,7 @@ import jakarta.transaction.Transactional;
 @Service
 public class CustomerServiceImplementation implements CustomerService {
 
-    private static final int BATCH_SIZE = 100;
+    private static final int BATCH_SIZE = 1000;
     private static final Log log = LogFactory.getLog(CustomerServiceImplementation.class);
     private final CustomerRepository customerRepository;
 
@@ -40,6 +40,8 @@ public class CustomerServiceImplementation implements CustomerService {
 
     @Transactional
     public void importCustomersFromCSV(String csvFilePath) {
+    	
+    	log.info("TalendJob: 'LocalFileStageToSql' - Start");
     	 Reader reader = null;
     	    CSVParser csvParser = null;
 
@@ -50,6 +52,8 @@ public class CustomerServiceImplementation implements CustomerService {
             List<CustomerData> customersToInsert = new ArrayList<>();
             int rowCount = 0;
 
+            log.info("tFileInputDelimited_2 - Retrieving records from the datasource.");
+            
             for (CSVRecord record : csvParser) {
                 Long customerId = Long.parseLong(record.get("Customer_ID"));
                 String name = record.get("Name");
@@ -76,7 +80,7 @@ public class CustomerServiceImplementation implements CustomerService {
                     rowCount++;
 
                     if (rowCount % BATCH_SIZE == 0) {
-                    	log.info("Saving customer data to database");
+                    	log.info("Saving customer data to database in BATCH_SIZE of : "+ BATCH_SIZE);
                         customerRepository.saveAll(customersToInsert);
                         customersToInsert.clear();
                     }
@@ -87,7 +91,12 @@ public class CustomerServiceImplementation implements CustomerService {
                 customerRepository.saveAll(customersToInsert);
             }
 
-            System.out.println("Total customers inserted: " + rowCount);
+            log.info("tFileInputDelimited_2 - Retrieved records count: "+ rowCount);
+
+            log.info("TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.");
+            
+            //            System.out.println("Total customers inserted: " + rowCount);
+            
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

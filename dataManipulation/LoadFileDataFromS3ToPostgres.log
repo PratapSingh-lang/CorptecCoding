@@ -1,0 +1,51 @@
+2023-07-15T12:16:50.420+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : Starting DataManipulationApplication using Java 19 with PID 7288 (H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation\target\classes started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-15T12:16:50.425+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-07-15T12:16:50.590+05:30  INFO 7288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-15T12:16:50.596+05:30  INFO 7288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-15T12:16:52.135+05:30  INFO 7288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-15T12:16:52.269+05:30  INFO 7288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interfaces.
+2023-07-15T12:16:53.827+05:30  INFO 7288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-07-15T12:16:53.856+05:30  INFO 7288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-15T12:16:53.856+05:30  INFO 7288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-15T12:16:54.039+05:30  INFO 7288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-15T12:16:54.040+05:30  INFO 7288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3444 ms
+2023-07-15T12:16:54.404+05:30  INFO 7288 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-15T12:16:54.528+05:30  INFO 7288 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-07-15T12:16:54.534+05:30  INFO 7288 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-15T12:16:54.829+05:30  INFO 7288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-15T12:16:55.151+05:30  INFO 7288 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-15T12:16:55.192+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-15T12:16:55.640+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@250d0777
+2023-07-15T12:16:55.644+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-15T12:16:56.261+05:30  INFO 7288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-15T12:16:57.760+05:30  INFO 7288 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-15T12:16:57.940+05:30  INFO 7288 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-15T12:16:59.054+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-15T12:16:59.072+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-15T12:16:59.072+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-15T12:16:59.998+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-15T12:16:59.999+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-15T12:17:00.005+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-15T12:17:00.946+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-15T12:17:00.947+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-15T12:17:00.989+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-15T12:17:01.014+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-15T12:17:02.489+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
+2023-07-15T12:17:04.056+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
+2023-07-15T12:17:04.896+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
+2023-07-15T12:17:05.708+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
+2023-07-15T12:17:06.436+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
+2023-07-15T12:17:06.672+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 5000
+2023-07-15T12:17:06.673+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-15T12:17:08.747+05:30  WARN 7288 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-15T12:17:09.627+05:30  INFO 7288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-15T12:17:09.722+05:30  INFO 7288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-07-15T12:17:09.746+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : Started DataManipulationApplication in 20.299 seconds (process running for 21.32)
+2023-07-15T12:17:38.582+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-15T12:17:38.583+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-15T12:17:38.587+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-07-15T12:17:38.781+05:30  INFO 7288 --- [http-nio-8080-exec-2] .d.s.I.CustomerDataServiceImplementation : returning customer data by JobClassification : Software Engineer
+2023-07-15T12:18:00.863+05:30  INFO 7288 --- [http-nio-8080-exec-5] .d.s.I.CustomerDataServiceImplementation : returning customer data by region : Houston
+2023-07-15T13:39:06.854+05:30  WARN 7288 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m40s711ms181µs900ns).
+2023-07-15T14:32:40.163+05:30  WARN 7288 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m2s617ms644µs100ns).
+2023-07-15T14:53:23.076+05:30  WARN 7288 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m12s688ms768µs).

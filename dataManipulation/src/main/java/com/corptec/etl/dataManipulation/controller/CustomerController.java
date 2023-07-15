@@ -19,6 +19,9 @@ import com.corptec.etl.dataManipulation.entity.CustomerData;
 import com.corptec.etl.dataManipulation.helper.CreateResponseData;
 import com.corptec.etl.dataManipulation.service.CustomerDataService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @RestController
 @RequestMapping(path = "/customerDetails")
 @CrossOrigin("*")
@@ -29,6 +32,8 @@ public class CustomerController {
 	@Autowired
 	private CreateResponseData createResponseData;
 
+	 private static final Logger log = LoggerFactory.getLogger(CustomerController.class);
+	
 	@GetMapping(value = "/{name}/region", produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> getCustomersByRegion(@PathVariable String name) {

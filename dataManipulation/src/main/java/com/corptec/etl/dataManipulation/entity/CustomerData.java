@@ -4,7 +4,6 @@
 package com.corptec.etl.dataManipulation.entity;
 
 
-import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -23,7 +22,6 @@ import jakarta.persistence.Table;
  */
 @Entity
 @Table(name = "customers")
-@Data
 @JsonPropertyOrder({ "Customer_ID", "Name", "Surname", "Gender", "Age", "Region", "Job_Classification", "Date_Joined", "Balance" })
 public class CustomerData  {
 
