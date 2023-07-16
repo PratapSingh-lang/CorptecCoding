@@ -1,51 +1,450 @@
-2023-07-15T12:16:50.420+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : Starting DataManipulationApplication using Java 19 with PID 7288 (H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation\target\classes started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
-2023-07-15T12:16:50.425+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-07-15T12:16:50.590+05:30  INFO 7288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-15T12:16:50.596+05:30  INFO 7288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-15T12:16:52.135+05:30  INFO 7288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-15T12:16:52.269+05:30  INFO 7288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interfaces.
-2023-07-15T12:16:53.827+05:30  INFO 7288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-07-15T12:16:53.856+05:30  INFO 7288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-15T12:16:53.856+05:30  INFO 7288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
-2023-07-15T12:16:54.039+05:30  INFO 7288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-15T12:16:54.040+05:30  INFO 7288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3444 ms
-2023-07-15T12:16:54.404+05:30  INFO 7288 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-15T12:16:54.528+05:30  INFO 7288 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
-2023-07-15T12:16:54.534+05:30  INFO 7288 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-15T12:16:54.829+05:30  INFO 7288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-15T12:16:55.151+05:30  INFO 7288 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-15T12:16:55.192+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-15T12:16:55.640+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@250d0777
-2023-07-15T12:16:55.644+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-15T12:16:56.261+05:30  INFO 7288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-15T12:16:57.760+05:30  INFO 7288 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-15T12:16:57.940+05:30  INFO 7288 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-15T12:16:59.054+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
-2023-07-15T12:16:59.072+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
-2023-07-15T12:16:59.072+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
-2023-07-15T12:16:59.998+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
-2023-07-15T12:16:59.999+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
-2023-07-15T12:17:00.005+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
-2023-07-15T12:17:00.946+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
-2023-07-15T12:17:00.947+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
-2023-07-15T12:17:00.989+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
-2023-07-15T12:17:01.014+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
-2023-07-15T12:17:02.489+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
-2023-07-15T12:17:04.056+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
-2023-07-15T12:17:04.896+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
-2023-07-15T12:17:05.708+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
-2023-07-15T12:17:06.436+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : Saving customer data to database in BATCH_SIZE of : 1000
-2023-07-15T12:17:06.672+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 5000
-2023-07-15T12:17:06.673+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
-2023-07-15T12:17:08.747+05:30  WARN 7288 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-15T12:17:09.627+05:30  INFO 7288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-15T12:17:09.722+05:30  INFO 7288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-07-15T12:17:09.746+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : Started DataManipulationApplication in 20.299 seconds (process running for 21.32)
-2023-07-15T12:17:38.582+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-15T12:17:38.583+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-15T12:17:38.587+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2023-07-15T12:17:38.781+05:30  INFO 7288 --- [http-nio-8080-exec-2] .d.s.I.CustomerDataServiceImplementation : returning customer data by JobClassification : Software Engineer
-2023-07-15T12:18:00.863+05:30  INFO 7288 --- [http-nio-8080-exec-5] .d.s.I.CustomerDataServiceImplementation : returning customer data by region : Houston
-2023-07-15T13:39:06.854+05:30  WARN 7288 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m40s711ms181µs900ns).
-2023-07-15T14:32:40.163+05:30  WARN 7288 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m2s617ms644µs100ns).
-2023-07-15T14:53:23.076+05:30  WARN 7288 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m12s688ms768µs).
+2023-07-16T22:27:03.651+05:30  WARN 7288 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1d14m59s250ms115µs500ns).
+2023-07-16T22:38:14.643+05:30  INFO 13512 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Starting CustomerDataServiceTest using Java 19 with PID 13512 (started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-16T22:38:14.647+05:30  INFO 13512 --- [main] c.c.e.d.service.CustomerDataServiceTest  : No active profile set, falling back to 1 default profile: "default"
+2023-07-16T22:38:16.421+05:30  INFO 13512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T22:38:16.586+05:30  INFO 13512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 141 ms. Found 1 JPA repository interfaces.
+2023-07-16T22:38:17.848+05:30  INFO 13512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T22:38:18.064+05:30  INFO 13512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-07-16T22:38:18.073+05:30  INFO 13512 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-16T22:38:18.769+05:30  INFO 13512 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:38:19.122+05:30  INFO 13512 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T22:38:19.171+05:30  INFO 13512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-16T22:38:20.245+05:30  INFO 13512 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@37314843
+2023-07-16T22:38:20.249+05:30  INFO 13512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-16T22:38:20.908+05:30  INFO 13512 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:38:22.463+05:30  INFO 13512 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T22:38:23.084+05:30  INFO 13512 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:38:24.423+05:30  INFO 13512 --- [main] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-16T22:38:24.489+05:30  INFO 13512 --- [main] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-16T22:38:24.492+05:30  INFO 13512 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-16T22:38:25.913+05:30  INFO 13512 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-16T22:38:25.913+05:30  INFO 13512 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-16T22:38:25.919+05:30  INFO 13512 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-16T22:38:27.185+05:30  INFO 13512 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-16T22:38:27.185+05:30  INFO 13512 --- [main] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-16T22:38:27.308+05:30  INFO 13512 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-16T22:38:27.384+05:30  INFO 13512 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-16T22:38:32.431+05:30  INFO 13512 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 0
+2023-07-16T22:38:32.431+05:30  INFO 13512 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-16T22:38:33.129+05:30  WARN 13512 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T22:38:34.423+05:30  INFO 13512 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Started CustomerDataServiceTest in 20.627 seconds (process running for 25.348)
+2023-07-16T22:38:39.313+05:30 ERROR 13512 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener] to prepare test instance [com.corptec.etl.dataManipulation.service.CustomerDataServiceTest@7bfb46b2]
+
+org.mockito.exceptions.base.MockitoException: 
+Cannot instantiate @InjectMocks field named 'customerDataService'! Cause: the type 'CustomerDataService' is an interface.
+You haven't provided the instance at field declaration so I tried to construct the instance.
+Examples of correct usage of @InjectMocks:
+   @InjectMocks Service service = new Service();
+   @InjectMocks Service service;
+   //and... don't forget about some @Mocks for injection :)
+
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.initMocks(MockitoTestExecutionListener.java:83) ~[spring-boot-test-3.2.0-SNAPSHOT.jar:3.2.0-SNAPSHOT]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:60) ~[spring-boot-test-3.2.0-SNAPSHOT.jar:3.2.0-SNAPSHOT]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241) ~[spring-test-6.1.0-M2.jar:6.1.0-M2]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:151) ~[spring-test-6.1.0-M2.jar:6.1.0-M2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:95) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:91) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:60) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:na]
+
+2023-07-16T22:38:39.661+05:30  INFO 13512 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:38:39.715+05:30  INFO 13512 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-16T22:38:39.787+05:30  INFO 13512 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-16T22:41:40.582+05:30  INFO 13668 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Starting CustomerDataServiceTest using Java 19 with PID 13668 (started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-16T22:41:40.586+05:30  INFO 13668 --- [main] c.c.e.d.service.CustomerDataServiceTest  : No active profile set, falling back to 1 default profile: "default"
+2023-07-16T22:41:42.102+05:30  INFO 13668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T22:41:42.251+05:30  INFO 13668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interfaces.
+2023-07-16T22:41:43.358+05:30  INFO 13668 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T22:41:43.493+05:30  INFO 13668 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-07-16T22:41:43.499+05:30  INFO 13668 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-16T22:41:43.882+05:30  INFO 13668 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:41:44.179+05:30  INFO 13668 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T22:41:44.210+05:30  INFO 13668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-16T22:41:45.263+05:30  INFO 13668 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1282e98
+2023-07-16T22:41:45.270+05:30  INFO 13668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-16T22:41:46.360+05:30  INFO 13668 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:41:48.883+05:30  INFO 13668 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T22:41:49.008+05:30  INFO 13668 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:41:50.109+05:30  INFO 13668 --- [main] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-16T22:41:50.128+05:30  INFO 13668 --- [main] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-16T22:41:50.130+05:30  INFO 13668 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-16T22:41:51.810+05:30  INFO 13668 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-16T22:41:51.814+05:30  INFO 13668 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-16T22:41:51.821+05:30  INFO 13668 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-16T22:41:53.239+05:30  INFO 13668 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-16T22:41:53.240+05:30  INFO 13668 --- [main] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-16T22:41:53.344+05:30  INFO 13668 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-16T22:41:53.366+05:30  INFO 13668 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-16T22:41:57.948+05:30  INFO 13668 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 0
+2023-07-16T22:41:57.949+05:30  INFO 13668 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-16T22:41:58.357+05:30  WARN 13668 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T22:41:59.061+05:30  INFO 13668 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Started CustomerDataServiceTest in 19.208 seconds (process running for 21.605)
+2023-07-16T22:42:01.297+05:30 ERROR 13668 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener] to prepare test instance [com.corptec.etl.dataManipulation.service.CustomerDataServiceTest@d3fa0e1]
+
+org.mockito.exceptions.base.MockitoException: 
+Cannot instantiate @InjectMocks field named 'customerDataService'! Cause: the type 'CustomerDataService' is an interface.
+You haven't provided the instance at field declaration so I tried to construct the instance.
+Examples of correct usage of @InjectMocks:
+   @InjectMocks Service service = new Service();
+   @InjectMocks Service service;
+   //and... don't forget about some @Mocks for injection :)
+
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.initMocks(MockitoTestExecutionListener.java:83) ~[spring-boot-test-3.2.0-SNAPSHOT.jar:3.2.0-SNAPSHOT]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:60) ~[spring-boot-test-3.2.0-SNAPSHOT.jar:3.2.0-SNAPSHOT]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241) ~[spring-test-6.1.0-M2.jar:6.1.0-M2]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:151) ~[spring-test-6.1.0-M2.jar:6.1.0-M2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:95) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:91) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:60) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:na]
+
+2023-07-16T22:42:01.456+05:30  INFO 13668 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:42:01.464+05:30  INFO 13668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-16T22:42:01.514+05:30  INFO 13668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-16T22:42:34.074+05:30  INFO 9276 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Starting CustomerDataServiceTest using Java 19 with PID 9276 (started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-16T22:42:34.078+05:30  INFO 9276 --- [main] c.c.e.d.service.CustomerDataServiceTest  : No active profile set, falling back to 1 default profile: "default"
+2023-07-16T22:42:35.607+05:30  INFO 9276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T22:42:35.766+05:30  INFO 9276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137 ms. Found 1 JPA repository interfaces.
+2023-07-16T22:42:37.044+05:30  INFO 9276 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T22:42:37.195+05:30  INFO 9276 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-07-16T22:42:37.204+05:30  INFO 9276 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-16T22:42:37.618+05:30  INFO 9276 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:42:37.902+05:30  INFO 9276 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T22:42:37.937+05:30  INFO 9276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-16T22:42:38.457+05:30  INFO 9276 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c97721b
+2023-07-16T22:42:38.462+05:30  INFO 9276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-16T22:42:39.170+05:30  INFO 9276 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:42:40.632+05:30  INFO 9276 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T22:42:40.741+05:30  INFO 9276 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:42:41.692+05:30  INFO 9276 --- [main] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-16T22:42:41.708+05:30  INFO 9276 --- [main] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-16T22:42:41.710+05:30  INFO 9276 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-16T22:42:42.677+05:30  INFO 9276 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-16T22:42:42.678+05:30  INFO 9276 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-16T22:42:42.684+05:30  INFO 9276 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-16T22:42:43.628+05:30  INFO 9276 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-16T22:42:43.629+05:30  INFO 9276 --- [main] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-16T22:42:43.712+05:30  INFO 9276 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-16T22:42:43.744+05:30  INFO 9276 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-16T22:42:48.509+05:30  INFO 9276 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 0
+2023-07-16T22:42:48.511+05:30  INFO 9276 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-16T22:42:48.932+05:30  WARN 9276 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T22:42:49.650+05:30  INFO 9276 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Started CustomerDataServiceTest in 16.324 seconds (process running for 18.452)
+2023-07-16T22:42:53.418+05:30  INFO 9276 --- [main] .d.s.I.CustomerDataServiceImplementation : returning customer data by region : North
+2023-07-16T22:42:56.220+05:30  INFO 9276 --- [main] .d.s.I.CustomerDataServiceImplementation : returning customer data by JobClassification : Engineer
+2023-07-16T22:42:56.376+05:30  INFO 9276 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:42:56.405+05:30  INFO 9276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-16T22:42:56.448+05:30  INFO 9276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-16T22:44:58.019+05:30  INFO 5304 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Starting CustomerDataServiceTest using Java 19 with PID 5304 (started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-16T22:44:58.022+05:30  INFO 5304 --- [main] c.c.e.d.service.CustomerDataServiceTest  : No active profile set, falling back to 1 default profile: "default"
+2023-07-16T22:44:59.570+05:30  INFO 5304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T22:44:59.697+05:30  INFO 5304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interfaces.
+2023-07-16T22:45:00.751+05:30  INFO 5304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T22:45:00.867+05:30  INFO 5304 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-07-16T22:45:00.873+05:30  INFO 5304 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-16T22:45:01.240+05:30  INFO 5304 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:45:01.564+05:30  INFO 5304 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T22:45:01.612+05:30  INFO 5304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-16T22:45:02.170+05:30  INFO 5304 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@9e30f9a
+2023-07-16T22:45:02.176+05:30  INFO 5304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-16T22:45:02.904+05:30  INFO 5304 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:45:04.561+05:30  INFO 5304 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T22:45:05.323+05:30  INFO 5304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:45:06.339+05:30  INFO 5304 --- [main] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-16T22:45:06.357+05:30  INFO 5304 --- [main] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-16T22:45:06.359+05:30  INFO 5304 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-16T22:45:07.942+05:30  INFO 5304 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-16T22:45:07.948+05:30  INFO 5304 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-16T22:45:07.954+05:30  INFO 5304 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-16T22:45:09.084+05:30  INFO 5304 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-16T22:45:09.085+05:30  INFO 5304 --- [main] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-16T22:45:09.153+05:30  INFO 5304 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-16T22:45:09.177+05:30  INFO 5304 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-16T22:45:13.759+05:30  INFO 5304 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 0
+2023-07-16T22:45:13.759+05:30  INFO 5304 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-16T22:45:14.244+05:30  WARN 5304 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T22:45:14.953+05:30  INFO 5304 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Started CustomerDataServiceTest in 17.666 seconds (process running for 21.289)
+2023-07-16T22:45:18.128+05:30  INFO 5304 --- [main] .d.s.I.CustomerDataServiceImplementation : returning customer data by region : North
+2023-07-16T22:45:18.462+05:30  INFO 5304 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:45:18.488+05:30  INFO 5304 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-16T22:45:18.519+05:30  INFO 5304 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-16T22:48:34.112+05:30  INFO 6084 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Starting CustomerDataServiceTest using Java 19 with PID 6084 (started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-16T22:48:34.117+05:30  INFO 6084 --- [main] c.c.e.d.service.CustomerDataServiceTest  : No active profile set, falling back to 1 default profile: "default"
+2023-07-16T22:48:35.692+05:30  INFO 6084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T22:48:35.841+05:30  INFO 6084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interfaces.
+2023-07-16T22:48:36.893+05:30  INFO 6084 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T22:48:37.049+05:30  INFO 6084 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-07-16T22:48:37.057+05:30  INFO 6084 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-16T22:48:37.462+05:30  INFO 6084 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:48:37.778+05:30  INFO 6084 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T22:48:37.810+05:30  INFO 6084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-16T22:48:38.342+05:30  INFO 6084 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4db0ba1c
+2023-07-16T22:48:38.348+05:30  INFO 6084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-16T22:48:39.082+05:30  INFO 6084 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:48:40.765+05:30  INFO 6084 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T22:48:40.868+05:30  INFO 6084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:48:41.868+05:30  INFO 6084 --- [main] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-16T22:48:41.885+05:30  INFO 6084 --- [main] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-16T22:48:41.888+05:30  INFO 6084 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-16T22:48:42.824+05:30  INFO 6084 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-16T22:48:42.827+05:30  INFO 6084 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-16T22:48:42.833+05:30  INFO 6084 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-16T22:48:43.757+05:30  INFO 6084 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-16T22:48:43.757+05:30  INFO 6084 --- [main] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-16T22:48:43.806+05:30  INFO 6084 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-16T22:48:43.828+05:30  INFO 6084 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-16T22:48:48.462+05:30  INFO 6084 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 0
+2023-07-16T22:48:48.463+05:30  INFO 6084 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-16T22:48:48.939+05:30  WARN 6084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T22:48:49.692+05:30  INFO 6084 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Started CustomerDataServiceTest in 16.329 seconds (process running for 18.804)
+2023-07-16T22:48:51.552+05:30  INFO 6084 --- [main] .d.s.I.CustomerDataServiceImplementation : returning customer data by region : Some Region
+2023-07-16T22:48:51.800+05:30  INFO 6084 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:48:51.815+05:30  INFO 6084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-16T22:48:51.859+05:30  INFO 6084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-16T22:49:07.579+05:30  INFO 2356 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Starting CustomerDataServiceTest using Java 19 with PID 2356 (started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-16T22:49:07.587+05:30  INFO 2356 --- [main] c.c.e.d.service.CustomerDataServiceTest  : No active profile set, falling back to 1 default profile: "default"
+2023-07-16T22:49:09.168+05:30  INFO 2356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T22:49:09.305+05:30  INFO 2356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interfaces.
+2023-07-16T22:49:10.342+05:30  INFO 2356 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T22:49:10.524+05:30  INFO 2356 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-07-16T22:49:10.533+05:30  INFO 2356 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-16T22:49:10.963+05:30  INFO 2356 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:49:11.250+05:30  INFO 2356 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T22:49:11.282+05:30  INFO 2356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-16T22:49:11.815+05:30  INFO 2356 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1282e98
+2023-07-16T22:49:11.820+05:30  INFO 2356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-16T22:49:12.491+05:30  INFO 2356 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:49:14.114+05:30  INFO 2356 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T22:49:14.222+05:30  INFO 2356 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:49:15.225+05:30  INFO 2356 --- [main] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-16T22:49:15.248+05:30  INFO 2356 --- [main] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-16T22:49:15.252+05:30  INFO 2356 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-16T22:49:16.135+05:30  INFO 2356 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-16T22:49:16.141+05:30  INFO 2356 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-16T22:49:16.149+05:30  INFO 2356 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-16T22:49:17.023+05:30  INFO 2356 --- [main] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-16T22:49:17.024+05:30  INFO 2356 --- [main] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-16T22:49:17.101+05:30  INFO 2356 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-16T22:49:17.126+05:30  INFO 2356 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-16T22:49:21.653+05:30  INFO 2356 --- [main] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 0
+2023-07-16T22:49:21.654+05:30  INFO 2356 --- [main] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-16T22:49:22.119+05:30  WARN 2356 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T22:49:22.877+05:30  INFO 2356 --- [main] c.c.e.d.service.CustomerDataServiceTest  : Started CustomerDataServiceTest in 16.036 seconds (process running for 18.54)
+2023-07-16T22:49:24.812+05:30  INFO 2356 --- [main] .d.s.I.CustomerDataServiceImplementation : returning customer data by region : Some Region
+2023-07-16T22:49:24.910+05:30  INFO 2356 --- [main] .d.s.I.CustomerDataServiceImplementation : returning customer data by JobClassification : Some Job Classification
+2023-07-16T22:49:24.998+05:30  INFO 2356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:49:25.011+05:30  INFO 2356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-16T22:49:25.061+05:30  INFO 2356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-16T22:50:44.045+05:30  INFO 7288 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-16T22:50:44.151+05:30  INFO 7288 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:50:44.181+05:30  INFO 7288 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-16T22:50:44.231+05:30  INFO 7288 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-16T22:50:44.583+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : Starting DataManipulationApplication using Java 19 with PID 7288 (H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation\target\classes started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-16T22:50:44.585+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-07-16T22:50:45.101+05:30  INFO 7288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T22:50:45.133+05:30  INFO 7288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
+2023-07-16T22:50:45.560+05:30  INFO 7288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-07-16T22:50:45.563+05:30  INFO 7288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-16T22:50:45.567+05:30  INFO 7288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-16T22:50:45.668+05:30  INFO 7288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-16T22:50:45.669+05:30  INFO 7288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1069 ms
+2023-07-16T22:50:46.076+05:30  INFO 7288 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T22:50:46.120+05:30  INFO 7288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:50:46.126+05:30  INFO 7288 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T22:50:46.133+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-07-16T22:50:46.245+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@6e485f5d
+2023-07-16T22:50:46.246+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-07-16T22:50:46.291+05:30  INFO 7288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:50:46.383+05:30  INFO 7288 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T22:50:46.452+05:30  INFO 7288 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:50:46.735+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-16T22:50:46.745+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-16T22:50:46.746+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-16T22:50:46.790+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-16T22:50:46.806+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-16T22:50:46.807+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-16T22:50:47.437+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-16T22:50:47.437+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-16T22:50:47.465+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-16T22:50:47.467+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-16T22:50:50.896+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 0
+2023-07-16T22:50:50.896+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-16T22:50:51.005+05:30  WARN 7288 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T22:50:51.254+05:30  INFO 7288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-16T22:50:51.286+05:30  INFO 7288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-07-16T22:50:51.296+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : Started DataManipulationApplication in 6.82 seconds (process running for 124465.149)
+2023-07-16T22:50:51.303+05:30  INFO 7288 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-16T22:50:58.001+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-16T22:50:58.002+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-16T22:50:58.018+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2023-07-16T22:50:58.046+05:30  INFO 7288 --- [http-nio-8080-exec-2] .d.s.I.CustomerDataServiceImplementation : returning customer data by region : Houston
+2023-07-16T22:51:04.016+05:30  INFO 7288 --- [http-nio-8080-exec-4] .d.s.I.CustomerDataServiceImplementation : returning customer data by JobClassification : Software Engineer
+2023-07-16T22:52:13.195+05:30  INFO 7288 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-16T22:52:13.280+05:30  INFO 7288 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:52:13.283+05:30  INFO 7288 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-07-16T22:52:13.300+05:30  INFO 7288 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-07-16T22:52:13.610+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : Starting DataManipulationApplication using Java 19 with PID 7288 (H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation\target\classes started by bhanu in H:\Users\bhanu\Documents\ETLAWS\ETLS3.zip\ETLS3\dataManipulation)
+2023-07-16T22:52:13.611+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-07-16T22:52:14.084+05:30  INFO 7288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T22:52:14.111+05:30  INFO 7288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interfaces.
+2023-07-16T22:52:14.357+05:30  INFO 7288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-07-16T22:52:14.359+05:30  INFO 7288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-16T22:52:14.360+05:30  INFO 7288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-07-16T22:52:14.427+05:30  INFO 7288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-16T22:52:14.428+05:30  INFO 7288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 798 ms
+2023-07-16T22:52:14.526+05:30  INFO 7288 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T22:52:14.542+05:30  INFO 7288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:52:14.543+05:30  INFO 7288 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T22:52:14.545+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-07-16T22:52:14.691+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@36676648
+2023-07-16T22:52:14.698+05:30  INFO 7288 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-07-16T22:52:14.743+05:30  INFO 7288 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T22:52:14.862+05:30  INFO 7288 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T22:52:14.931+05:30  INFO 7288 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T22:52:15.189+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : TalendJob: 'LoadFileDataFromS3ToPostgres' - Start.
+2023-07-16T22:52:15.199+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : ContextLoad_1 - Loaded contexts count: 13.
+2023-07-16T22:52:15.200+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection.
+2023-07-16T22:52:15.216+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Connection_1 - Creating new connection successfully.
+2023-07-16T22:52:15.217+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get an free connection from tS3Connection_1.
+2023-07-16T22:52:15.218+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Getting an object with key:AUTO_DEPLOYMENT/new_cluster/Customer.csv
+2023-07-16T22:52:15.629+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : tS3Get_1 - Get the object successfully.
+2023-07-16T22:52:15.629+05:30  INFO 7288 --- [restartedMain] c.c.e.d.helper.GetDataFromS3             : S3FileDownloadAndStageToDirectory' is done.
+2023-07-16T22:52:15.646+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LocalFileStageToSql' - Start
+2023-07-16T22:52:15.647+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieving records from the datasource.
+2023-07-16T22:52:18.230+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : tFileInputDelimited_2 - Retrieved records count: 0
+2023-07-16T22:52:18.230+05:30  INFO 7288 --- [restartedMain] .c.e.d.s.I.CustomerServiceImplementation : TalendJob: 'LoadFileDataFromS3ToPostgres' - Done.
+2023-07-16T22:52:18.332+05:30  WARN 7288 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T22:52:18.506+05:30  INFO 7288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-16T22:52:18.531+05:30  INFO 7288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-07-16T22:52:18.541+05:30  INFO 7288 --- [restartedMain] c.c.e.d.DataManipulationApplication      : Started DataManipulationApplication in 5.052 seconds (process running for 124552.394)
+2023-07-16T22:52:18.544+05:30  INFO 7288 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-16T22:52:26.015+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-16T22:52:26.016+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-16T22:52:26.017+05:30  INFO 7288 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-16T22:52:26.025+05:30  INFO 7288 --- [http-nio-8080-exec-1] .d.s.I.CustomerDataServiceImplementation : returning customer data by JobClassification : Software Engineer

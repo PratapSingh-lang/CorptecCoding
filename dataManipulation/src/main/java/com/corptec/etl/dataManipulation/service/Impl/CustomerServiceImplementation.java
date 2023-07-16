@@ -69,7 +69,7 @@ public class CustomerServiceImplementation implements CustomerService {
                     CustomerData customer = new CustomerData();
                     customer.setCustomerId(customerId);
                     customer.setName(name);
-                    customer.setSurname(surname);
+                    customer.setSurname(surname); 
                     customer.setGender(gender);
                     customer.setAge(age);
                     customer.setRegion(region);
